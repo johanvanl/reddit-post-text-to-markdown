@@ -36,6 +36,7 @@
         .done(function(data) {
           var post = data[0].data.children[0].data;
           var out = "# " + post.title + "\n\n";
+          out += "By *" + post.author + "*.\n\n";
           out += post.selftext;
           $("#textarea-output").prop('hidden', false);
           $("#textarea-output").val(out);
